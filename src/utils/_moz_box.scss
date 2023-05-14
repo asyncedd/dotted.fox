@@ -13,7 +13,7 @@
   $important: _important($important);
 
   flex: $num $important;
-  -moz-box-flex: $num $important;
+  flex-grow: $num $important; flex-shrink: $num $important;
 }
 
 @mixin BoxOrder($num, $important: false) {
@@ -34,24 +34,24 @@
 
   @if $align == "start" {
     align-items: flex-start $important;
-    -moz-box-align: start $important;
+    align-items: start $important;
   }
   @if $align == "center" {
     align-items: center $important;
-    -moz-box-align: center $important;
+    align-items: center $important;
   }
   @if $align == "end" {
     align-items: flex-end $important;
-    -moz-box-align: end $important;
+    align-items: end $important;
   }
 
   @if $align == "baseline" {
     align-items: baseline $important;
-    -moz-box-align: baseline $important;
+    align-items: baseline $important;
   }
   @if $align == "stretch" {
     align-items: stretch $important;
-    -moz-box-align: stretch $important;
+    align-items: stretch $important;
   }
 }
 
@@ -82,31 +82,31 @@
 
   @if $direction == "row" {
     flex-direction: row $important;
-    -moz-box-orient: horizontal $important;
-    -moz-box-direction: normal $important;
+    -flex-direction : horizontal $important;
+    -flex-direction : normal $important;
   }
   @if $direction == "row-reverse" {
     flex-direction: row-reverse $important;
-    -moz-box-orient: horizontal $important;
-    -moz-box-direction: reverse $important;
+    -flex-direction : horizontal $important;
+    -flex-direction : reverse $important;
   }
   @if $direction == "column" {
     flex-direction: column $important;
-    -moz-box-orient: vertical $important;
-    -moz-box-direction: normal $important;
+    -flex-direction : vertical $important;
+    -flex-direction : normal $important;
   }
   @if $direction == "column-reverse" {
     flex-direction: column-reverse $important;
-    -moz-box-orient: vertical $important;
-    -moz-box-direction: reverse $important;
+    -flex-direction : vertical $important;
+    -flex-direction : reverse $important;
   }
   @if $direction == "revert" {
     flex-direction: revert $important;
-    -moz-box-direction: revert $important;
+    -flex-direction : revert $important;
   }
 
   @if $direction == "reverse" {
     flex-direction: row-reverse $important;
-    -moz-box-direction: reverse $important;
+    -flex-direction : reverse $important;
   }
 }

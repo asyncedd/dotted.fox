@@ -2622,7 +2622,7 @@ darken(#0060df, 28.1%):  #002250;
         menuitem[type="checkbox"] {
           appearance: none !important;
           align-items: center !important;
-          -moz-box-align: center !important;
+          align-items: center !important;
           margin: 0px 2px !important;
         }
         menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon {
