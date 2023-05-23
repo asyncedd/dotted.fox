@@ -1,30 +1,30 @@
 /* Show title of unread tabs with red and italic font */
 /*
 :root.sidebar tab-item.unread .label-content {
-color: red !important;
-font-style: italic !important;
+  color: red !important;
+  font-style: italic !important;
 }
 */
 
 /* Add private browsing indicator per tab */
 /*
 :root.sidebar tab-item.private-browsing tab-label:before {
-content: "🕶";
+  content: "🕶";
 }
 */
 
 /* Show title of unread tabs with red and italic font */
 /*
 :root.sidebar tab-item.unread .label-content {
-color: red !important;
-font-style: italic !important;
+  color: red !important;
+  font-style: italic !important;
 }
 */
 
 /* Add private browsing indicator per tab */
 /*
 :root.sidebar tab-item.private-browsing tab-label:before {
-content: "🕶";
+  content: "🕶";
 }
 */
 
@@ -32,9 +32,6 @@ content: "🕶";
   --theme-colors-toolbar: rgba(16,16,16, .5);
   --tab-surface-hover: rgba(16,16,16, .5);
   --tab-surface-regular: rgba(32,32,32, .25);
-  --theme-colors-frame: rgb(30, 30, 46);
-  --theme-colors-frame_inactive: rgb(30, 30, 46);
-  --theme-colors-ntp_background: rgb(30, 30, 46);
 }
 
 :root.sidebar tab-item.private-browsing tab-label:before {
@@ -42,8 +39,7 @@ content: "🕶";
 }
 
 #tabbar {
-  /* background: rgba(0,0,0,.5); */
-  background: rgb(30, 30, 46);
+  background: rgba(0,0,0,.5);
   padding: 0.5em 0.5em 0em 0.5em;
 }
 
@@ -63,12 +59,9 @@ tab-item[data-contextual-identity-name] .contextual-identity-marker {
 .sidebar tab-label {
   transition: opacity 300ms;
   opacity: 0; 
-  background: rgb(30, 30, 46);
 }
 .sidebar:hover tab-label {
   transition: opacity 300ms;
   opacity: 1;
-  background: rgb(30, 30, 46);
 }
-
 
