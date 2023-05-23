@@ -27,7 +27,7 @@ findbar {
 
   &::before {
     content:"";
-    display: flex;
+    display: -moz-box;
     position: absolute;
     @include BoxFlex(200);
   }
@@ -52,7 +52,7 @@ findbar {
     margin: 0 !important;
   }
   > .findbar-find-status {
-    display: flex;
+    display: -moz-box;
     overflow: hidden;
     text-overflow: ellipsis;
     @include BoxFlex(1);

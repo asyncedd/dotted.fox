@@ -199,7 +199,7 @@
 /* Change Separator */
 #PanelUI-fxa-menu::before {
   content: "";
-  display: flex;
+  display: -moz-box;
   border-bottom: 1px solid var(--panel-separator-color);
   margin: var(--panel-separator-margin);
   padding: 0;
@@ -412,7 +412,7 @@ panelMenuBookmarkThisPage[starred] {
     list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg") !important;
   }
   #BMB_bookmarksShowAllTop > .menu-iconic-left {
-    display: flex !important;
+    display: -moz-box !important;
   }
 }
 
