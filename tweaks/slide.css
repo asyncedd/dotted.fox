@@ -12,7 +12,7 @@ See the above repository for updates as well as full license text. */
 /* The border controlling sidebar width will be removed so you'll need to modify these values to change width */
 
 #sidebar-box{
-  --uc-sidebar-width: 40px;
+  --uc-sidebar-width: 100px;
   --uc-sidebar-hover-width: 210px;
   --uc-autohide-sidebar-delay: 600ms; /* Wait 0.6s before hiding sidebar */
   position: relative;
@@ -257,53 +257,53 @@ See the above repository for updates as well as full license text. */
   background: rgb(24, 24, 37) !important
 }
 
-/*SIDEBAR HOVER -- WINDOW LAYOUT*/
-
-/*Sets the --sidebar-split variable to --sidebar-split-max when the sidebar is hovered.*/
-#sidebar-box:hover,
-#sidebar-box:hover ~ #appcontent {
-  --sidebar-split: var(--sidebar-split-max);
-}
-
-/*Sets the --sidebar-split-left variable for when the sidebar is positioned on the right side of the screen.*/
-#sidebar-box[positionend]:hover,
-#sidebar-box[positionend]:hover ~ #appcontent {
-  --sidebar-split-positionend: calc(var(--sidebar-split-min) - var(--sidebar-split));
-}
-
-/*Transitions the width of the sidebar to the --sidebar-split variable.*/
-#sidebar-box {
-  transition: left var(--sidebar-duration) var(--sidebar-delay), width var(--sidebar-duration) var(--sidebar-delay), max-width var(--sidebar-duration) var(--sidebar-delay) !important;
-
-  position: relative;
-
-  width: var(--sidebar-split) !important;
-  max-width: var(--sidebar-split) !important;
-  min-width: 0 !important;
-
-  /*Reposition the sidebar if on the right.*/
-  left: var(--sidebar-split-positionend);
-}
-
-/*Disables the sidebar splitter, as the sidebar no-longer needs dynamically resized.*/
-#sidebar-splitter {
-  display: none !important;
-}
-/*Transitions the appcontent window (where websites are displayed) width to the inverse of --sidebar-split.*/
-:root:not([inDOMFullscreen]) #sidebar-box ~ #appcontent {
-  --target-content-width: calc(100% - var(--sidebar-split-min));
-
-  transition: left var(--sidebar-duration) var(--sidebar-delay), mask-position var(--sidebar-duration) var(--sidebar-delay) ;
-
-  position: relative;
-  overflow-x: hidden;
-
-  max-width: var(--target-content-width) !important;
-  min-width: var(--target-content-width) !important;
-
-  /*Reposition the appcontent if the sidebar is on the right*/
-  left: var(--sidebar-split-positionend);
-}
+/* /*SIDEBAR HOVER -- WINDOW LAYOUT*/ */
+/**/
+/* /*Sets the --sidebar-split variable to --sidebar-split-max when the sidebar is hovered.*/ */
+/* #sidebar-box:hover, */
+/* #sidebar-box:hover ~ #appcontent { */
+/*   --sidebar-split: var(--sidebar-split-max); */
+/* } */
+/**/
+/* /*Sets the --sidebar-split-left variable for when the sidebar is positioned on the right side of the screen.*/ */
+/* #sidebar-box[positionend]:hover, */
+/* #sidebar-box[positionend]:hover ~ #appcontent { */
+/*   --sidebar-split-positionend: calc(var(--sidebar-split-min) - var(--sidebar-split)); */
+/* } */
+/**/
+/* /*Transitions the width of the sidebar to the --sidebar-split variable.*/ */
+/* #sidebar-box { */
+/*   transition: left var(--sidebar-duration) var(--sidebar-delay), width var(--sidebar-duration) var(--sidebar-delay), max-width var(--sidebar-duration) var(--sidebar-delay) !important; */
+/**/
+/*   position: relative; */
+/**/
+/*   width: var(--sidebar-split) !important; */
+/*   max-width: var(--sidebar-split) !important; */
+/*   min-width: 0 !important; */
+/**/
+/*   /*Reposition the sidebar if on the right.*/ */
+/*   left: var(--sidebar-split-positionend); */
+/* } */
+/**/
+/* /*Disables the sidebar splitter, as the sidebar no-longer needs dynamically resized.*/ */
+/* #sidebar-splitter { */
+/*   display: none !important; */
+/* } */
+/* /*Transitions the appcontent window (where websites are displayed) width to the inverse of --sidebar-split.*/ */
+/* :root:not([inDOMFullscreen]) #sidebar-box ~ #appcontent { */
+/*   --target-content-width: calc(100% - var(--sidebar-split-min)); */
+/**/
+/*   transition: left var(--sidebar-duration) var(--sidebar-delay), mask-position var(--sidebar-duration) var(--sidebar-delay) ; */
+/**/
+/*   position: relative; */
+/*   overflow-x: hidden; */
+/**/
+/*   max-width: var(--target-content-width) !important; */
+/*   min-width: var(--target-content-width) !important; */
+/**/
+/*   /*Reposition the appcontent if the sidebar is on the right*/ */
+/*   left: var(--sidebar-split-positionend); */
+/* } */
 
 /*SIDEBAR HOVER -- SIDEBAR HEADER*/
 /*Transitions the sidebar switcher dropdown to the centre of the closed width of the sidebar.*/
