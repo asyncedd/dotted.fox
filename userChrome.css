@@ -8,5 +8,6 @@
 /* @import url(tweaks/tabs.css); */
 @import url(tweaks/tabcontent.css);
 @import url(tweaks/urlbar.css);
-@import url(tweaks/curved_tabs.css);
-@import url(tweaks/compact_urlbar_megabar.css);
+/* @import url(tweaks/curved_tabs.css); */
+/* @import url(tweaks/compact_urlbar_megabar.css); */
+@import url(tweaks/round_ui_items.css);
