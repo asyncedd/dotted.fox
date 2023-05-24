@@ -1,0 +1,20 @@
+findbar {
+  order: -1 !important;
+}
+
+.close-icon.findbar-closebutton {
+  order: 1 !important;
+}
+
+.findbar-container {
+  justify-content: center !important;
+}
+
+.findbar-container hbox {
+  order: 1 !important;
+}
+
+.findbar-case-sensitive, .findbar-match-diacritics, .findbar-entire-word {
+  display: none !important;
+}
+
