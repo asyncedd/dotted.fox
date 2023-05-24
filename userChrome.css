@@ -5,4 +5,5 @@
 @import url(lepton/chrome.css);
 @import url(tweaks/layout.css);
 @import url(tweaks/slide.css);
-@import url(tweaks/tabs.css);
+/* @import url(tweaks/tabs.css); */
+@import url(tweaks/urlbar.css);
