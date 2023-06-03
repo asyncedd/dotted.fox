@@ -4,23 +4,28 @@ See the above repository for updates as well as full license text. */
 /* Effect */
 .urlbar-icon,
 .toolbarbutton-icon,
-.menuitem-iconic .menu-iconic-icon{
+.menuitem-iconic .menu-iconic-icon {
   transition: transform 83ms linear !important;
 }
 
-toolbar .toolbarbutton-1 > .toolbarbutton-icon{
+toolbar .toolbarbutton-1 > .toolbarbutton-icon {
   transition: padding 83ms linear !important;
 }
 
 toolbarbutton#scrollbutton-up:active > .toolbarbutton-icon,
 toolbarbutton:not(.toolbarbutton-1):active > .toolbarbutton-icon,
-toolbar .toolbarbutton-1:not([disabled]):active > .toolbarbutton-badge-stack > .toolbarbutton-icon,
+toolbar
+  .toolbarbutton-1:not([disabled]):active
+  > .toolbarbutton-badge-stack
+  > .toolbarbutton-icon,
 .menuitem-iconic:active .menu-iconic-icon,
-.urlbar-page-action:active > .urlbar-icon{
+.urlbar-page-action:active > .urlbar-icon {
   transform: scale(0.6) !important;
 }
-toolbarbutton#scrollbutton-down:active > .toolbarbutton-icon{ transform: scale(-0.6) !important; }
+toolbarbutton#scrollbutton-down:active > .toolbarbutton-icon {
+  transform: scale(-0.6) !important;
+}
 
-toolbar .toolbarbutton-1:not([disabled]):active > .toolbarbutton-icon{
+toolbar .toolbarbutton-1:not([disabled]):active > .toolbarbutton-icon {
   padding: calc(var(--toolbarbutton-inner-padding) + 3px) !important;
 }

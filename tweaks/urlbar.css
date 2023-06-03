@@ -2,4 +2,6 @@
 See the above repository for updates as well as full license text. */
 
 #urlbar:not([focused]) #urlbar-input, /* ID for Firefox 70 */
-#urlbar:not([focused]) .urlbar-input{ text-align: center !important; }
+#urlbar:not([focused]) .urlbar-input {
+  text-align: center !important;
+}

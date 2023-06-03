@@ -3,17 +3,16 @@ See the above repository for updates as well as full license text. */
 
 /* This style simply makes the tab stay visible while it is being closed as well as makes the transition a bit slower */
 
-.tabbrowser-tab:not([pinned],[fadein]){
+.tabbrowser-tab:not([pinned], [fadein]) {
   transition-duration: 240ms, 240ms !important;
   transition-timing-function: ease-out, ease-out !important;
   visibility: visible !important;
 }
-.tab-content:not([fadein],[pinned])
-.tab-icon-pending:not([fadein]),
+.tab-content:not([fadein], [pinned]) .tab-icon-pending:not([fadein]),
 .tab-icon-image:not([fadein]),
-.tab-label:not([fadein]){
+.tab-label:not([fadein]) {
   visibility: visible !important;
 }
-.tab-label:not([fadein]){
+.tab-label:not([fadein]) {
   display: flex !important;
 }

@@ -14,7 +14,8 @@ findbar {
   order: 1 !important;
 }
 
-.findbar-case-sensitive, .findbar-match-diacritics, .findbar-entire-word {
+.findbar-case-sensitive,
+.findbar-match-diacritics,
+.findbar-entire-word {
   display: none !important;
 }
-
