@@ -88,17 +88,17 @@
   @if $direction == "row-reverse" {
     flex-direction: row-reverse $important;
     -moz-box-orient: horizontal $important;
-    -moz-box-direction: reverse $important;
+    flex-direction: row-reverse $important;
   }
   @if $direction == "column" {
     flex-direction: column $important;
-    -moz-box-orient: vertical $important;
+    flex-direction: column $important;
     -moz-box-direction: normal $important;
   }
   @if $direction == "column-reverse" {
     flex-direction: column-reverse $important;
-    -moz-box-orient: vertical $important;
-    -moz-box-direction: reverse $important;
+    flex-direction: column $important;
+    flex-direction: row-reverse $important;
   }
   @if $direction == "revert" {
     flex-direction: revert $important;
@@ -107,6 +107,6 @@
 
   @if $direction == "reverse" {
     flex-direction: row-reverse $important;
-    -moz-box-direction: reverse $important;
+    flex-direction: row-reverse $important;
   }
 }

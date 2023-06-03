@@ -2019,7 +2019,7 @@ font-size: 0.95em !important;
       font-weight: 600 !important;
     }
     dropmarker {
-      display: -moz-box !important;
+      display: flex !important;
       appearance: none !important;
       width: 12px !important;
       height: 12px !important;
@@ -2198,7 +2198,7 @@ xul|panel[type="autocomplete-richlistbox"] {
     font-size: inherit !important;
   }
   xul|menulist::part(dropmarker) {
-    display: -moz-box;
+    display: flex;
     margin-block: 6px !important;
   }
   xul|menulist:-moz-focusring::part(label-box) {
@@ -2211,7 +2211,7 @@ xul|panel[type="autocomplete-richlistbox"] {
     display: none !important;
   }
   xul|menulist::part(dropmarker) {
-    display: -moz-box !important;
+    display: flex !important;
     margin-block: 1px !important;
   }
   xul|menulist > xul|menupopup xul|menu,
@@ -3049,7 +3049,7 @@ transition: background-color 0.5s var(--animation-easing-function) !important;
         will-change: margin-inline-start, opacity, visibility;
       }
       #sidebar-box[hidden="true"] {
-        display: -moz-box !important;
+        display: flex !important;
         margin-inline-start: -18em;
         opacity: 0;
         visibility: collapse;
@@ -5904,7 +5904,7 @@ or -moz-bool-pref("userChrome.tabbar.as_titlebar") {
   }
   .tabbrowser-tab[selected="true"][pinned="true"] {
     flex: 100;
-    -moz-box-flex: 100;
+    flex-grow: 100;
     max-width: var(--tab-max-width) !important;
   }
   .tabbrowser-tab[selected="true"] .tab-label-container {
@@ -5956,7 +5956,7 @@ or -moz-bool-pref("userChrome.tabbar.as_titlebar") {
     :root:not([tabsintitlebar="true"])
     #tabbrowser-tabs[hasadjacentnewtabbutton]:not([overflow="true"])
     ~ #new-tab-button {
-      display: -moz-box !important;
+      display: flex !important;
     }
   }
 }
@@ -6011,7 +6011,7 @@ or -moz-bool-pref("userChrome.tabbar.as_titlebar") {
 > #tabbrowser-arrowscrollbox
 > #tabbrowser-arrowscrollbox-periphery
 > #tabs-newtab-button {
-  display: -moz-box !important;
+  display: flex !important;
 }
 #alltabs-button,
 :root:not([customizing]) #TabsToolbar #new-tab-button,
@@ -7260,9 +7260,9 @@ fill: var(--uc-newtab-bgcolor) !important;
     }
     .tabbrowser-tab[pinned][visuallyselected]:not([style*="transform: translateX"]):hover:not([busy])
     .tab-close-button {
-      display: -moz-box !important;
+      display: flex !important;
       order: -1 !important;
-      -moz-box-ordinal-group: 0 !important;
+      order: -1 !important;
       /* Looks like hover */
       width: var(--uc-close-button-size) !important;
       height: var(--uc-close-button-size) !important;
@@ -7279,9 +7279,9 @@ fill: var(--uc-newtab-bgcolor) !important;
     }
     @supports -moz-bool-pref("userChrome.tab.close_button_at_pinned.always") {
       .tabbrowser-tab[pinned][visuallyselected]:not([busy]) .tab-close-button {
-        display: -moz-box !important;
+        display: flex !important;
         order: -1 !important;
-        -moz-box-ordinal-group: 0 !important;
+        order: -1 !important;
         /* Looks like hover */
         width: var(--uc-close-button-size) !important;
         height: var(--uc-close-button-size) !important;
@@ -7299,9 +7299,9 @@ fill: var(--uc-newtab-bgcolor) !important;
     }
     @supports -moz-bool-pref("userChrome.tab.close_button_at_pinned.background") {
       .tabbrowser-tab[pinned]:not([style*="transform: translateX"]):hover:not([busy]) .tab-close-button {
-        display: -moz-box !important;
+        display: flex !important;
         order: -1 !important;
-        -moz-box-ordinal-group: 0 !important;
+        order: -1 !important;
         /* Looks like hover */
         width: var(--uc-close-button-size) !important;
         height: var(--uc-close-button-size) !important;
@@ -7342,7 +7342,7 @@ fill: var(--uc-newtab-bgcolor) !important;
 /*= Sound Tab - Show Label ===================================================*/
 @supports -moz-bool-pref("userChrome.tab.sound_show_label") {
   .tab-secondary-label:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture]) {
-    display: -moz-box !important;
+    display: flex !important;
   }
 }
 /*= Sound Tab - Show with Favicons ===========================================*/
@@ -8740,7 +8740,7 @@ fill: var(--uc-newtab-bgcolor) !important;
 }
 findbar {
   order: -1;
-  -moz-box-ordinal-group: 0;
+  order: -1;
   position: relative;
   height: 0 !important;
   overflow: visible;
@@ -8754,7 +8754,7 @@ findbar {
 }
 findbar::before {
   content: "";
-  display: -moz-box;
+  display: flex;
   position: absolute;
   flex: 200;
   -moz-box-flex: 200;
@@ -8769,7 +8769,7 @@ findbar::before {
 }
 .findbar-container {
   flex-direction: row-reverse;
-  -moz-box-direction: reverse;
+  flex-direction: row-reverse;
   border-width: 0 0 1px 1px;
   border-radius: var(--uc-rounding-toolbar, var(--toolbarbutton-border-radius)) 0 0
   var(--uc-rounding-toolbar, var(--toolbarbutton-border-radius)) !important;
@@ -8779,7 +8779,7 @@ findbar::before {
   margin: 0 !important;
 }
 .findbar-container > .findbar-find-status {
-  display: -moz-box;
+  display: flex;
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
@@ -9632,7 +9632,7 @@ or -moz-bool-pref("userChrome.autohide.infobar") {
 @supports -moz-bool-pref("userChrome.autohide.fill_urlbar") {
   #nav-bar:not(:hover, :focus-within, [urlbar-exceeds-toolbar-bounds="true"]) #urlbar-container {
     order: -1;
-    -moz-box-ordinal-group: 0;
+    order: -1;
     min-width: calc(
     var(--uc-navbar-width, 100vw) -
     (2 * var(--urlbar-margin-inline) + var(--uc-window-drag-space-pre, 0px) + var(--uc-navbar-gap, 0px))
@@ -10084,7 +10084,7 @@ or -moz-bool-pref("userChrome.autohide.infobar") {
       display: -moz-inline-box !important;
       margin-inline-start: var(--arrowpanel-menuicon-padding);
       order: -1 !important;
-      -moz-box-ordinal-group: 0 !important;
+      order: -1 !important;
     }
     #appMenu-proton-update-banner::before {
       content: url("../icons/whatsnew.svg");
@@ -10229,7 +10229,7 @@ or -moz-bool-pref("userChrome.autohide.infobar") {
     .syncNowBtn {
       visibility: visible !important;
       order: -1 !important;
-      -moz-box-ordinal-group: 0 !important;
+      order: -1 !important;
       margin-inline-end: var(--arrowpanel-menuicon-padding);
     }
     #PanelUI-fxa-menu-setup-sync-button {
@@ -10271,14 +10271,14 @@ or -moz-bool-pref("userChrome.autohide.infobar") {
     /* Change Separator */
     #PanelUI-fxa-menu::before {
       content: "";
-      display: -moz-box;
+      display: flex;
       border-bottom: 1px solid var(--panel-separator-color);
       margin: var(--panel-separator-margin);
       padding: 0;
     }
     #PanelUI-fxa-menu > :first-child {
       order: -1;
-      -moz-box-ordinal-group: 0;
+      order: -1;
     }
     #PanelUI-sign-out-separator {
       display: none;
@@ -10468,7 +10468,7 @@ or -moz-bool-pref("userChrome.autohide.infobar") {
         list-style-image: url("chrome://browser/skin/bookmark-star-on-tray.svg") !important;
       }
       #BMB_bookmarksShowAllTop > .menu-iconic-left {
-        display: -moz-box !important;
+        display: flex !important;
       }
     }
     /* BMB_bookmarksToolbarPopup */
