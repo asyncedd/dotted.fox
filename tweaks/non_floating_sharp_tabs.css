@@ -222,7 +222,7 @@ tabbrowser-tabs {
 }
 /* Hide the throbber all tabs*/
 /*.tab-throbber{ display: none } 
-.tab-icon-image[src]{ display: -moz-box }*/
+.tab-icon-image[src]{ display: flex }*/
 
 /* Remove throbber from selected tab*/
 .tab-throbber[selected] {

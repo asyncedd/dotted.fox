@@ -13,7 +13,7 @@
   $important: _important($important);
 
   flex: $num $important;
-  -moz-box-flex: $num $important;
+  flex-group $num $important;
 }
 
 @mixin BoxOrder($num, $important: false) {
