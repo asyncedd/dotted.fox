@@ -63,6 +63,27 @@ See the above repository for updates as well as full license text. */
   background-color: inherit !important;
   box-shadow: var(--sidebar-shadow);
 }
+
+#sidebar-header:hover,
+#sidebar:hover {
+  animation-name: sidebar-wiggle;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+/* Define the animation keyframes */
+@keyframes sidebar-wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px); /* Move back by 5 pixels */
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 #sidebar-box:hover > #sidebar-header,
 #sidebar-box:hover > #sidebar {
   min-width: var(--uc-sidebar-hover-width) !important;
