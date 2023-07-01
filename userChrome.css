@@ -7,7 +7,7 @@ See the above repository for updates as well as full license text. */
 #sidebar-box {
   --uc-sidebar-width: 70px;
   --uc-sidebar-hover-width: 210px;
-  --uc-autohide-sidebar-delay: 700ms; /* Wait 0.6s before hiding sidebar */
+  --uc-autohide-sidebar-delay: 500ms; /* Wait 0.6s before hiding sidebar */
   --uc-autohide-sidebar-speed: 200ms;
   --sidebar-color: rgb(17, 17, 27);
   --sidebar-shadow: 0 1px 10px var(--sidebar-color);
@@ -62,26 +62,6 @@ See the above repository for updates as well as full license text. */
   will-change: min-width;
   background-color: inherit !important;
   box-shadow: var(--sidebar-shadow);
-}
-
-#sidebar-header:hover,
-#sidebar:hover {
-  animation-name: sidebar-wiggle;
-  animation-duration: var(--uc-autohide-sidebar-speed);
-  animation-timing-function: ease-in-out;
-}
-
-/* Define the animation keyframes */
-@keyframes sidebar-wiggle {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-5px); /* Move back by 5 pixels */
-  }
-  100% {
-    transform: translateX(0px);
-  }
 }
 
 #sidebar-box:hover > #sidebar-header,
