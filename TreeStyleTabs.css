@@ -1,0 +1,55 @@
+:root {
+  --tab-border-radius: 7px; /* border radius of tabs */
+  --theme-colors-toolbar: #1e1e2e;
+  --tab-surface-regular: #1e1e2e;
+  --tab-surface-hover: #45475a;
+  --tab-surface-active-hover: rgba(137, 220, 235, 1);
+
+  --animation-duration: 200ms; /* duration of different animations [0s: turn all animations off] */
+  --spacing: 0.1px; /* spacing between tabs. [<15px: compact tabs] */
+  --distance-from-edge: 10px; /* distance between tabs, and left-right edges of sidebar*/
+  --hover-text-spacing: 0.2; /* should be left alone. with hover sidebar, if text is visible in collapsed status, increase this */
+}
+
+tab-item.active .background {
+  background: linear-gradient(
+    75deg,
+    rgba(180, 190, 254, 0.7),
+    rgba(137, 180, 250, 0.7),
+    rgba(116, 199, 236, 0.7),
+    rgba(137, 220, 235, 0.7),
+    rgba(148, 226, 213, 0.7)
+  );
+}
+
+tab-item.active .label-content {
+  color: #1e1e2e;
+}
+
+/* #tabbar tab-item tab-item-substance:hover { */
+/*   background: var(--tab-surface-hover); */
+/*   opacity: 1; */
+/* } */
+
+/* .sidebar tab-label { */
+/*   transition: opacity 300ms; */
+/*   opacity: 0; */
+/* } */
+/* .sidebar:hover tab-label { */
+/*   transition: opacity 300ms; */
+/*   opacity: 1; */
+/* } */
+/**/
+/* tab-item:not(.collapsed) { */
+/*   margin-top: var(--spacing); */
+/*   border-radius: var(--tab-border-radius); */
+/*   border: none !important; */
+/*   padding-top: 9px; */
+/*   padding-bottom: 10px; */
+/* } */
+/**/
+/* tab-item:not([data-level="0"]):not(.pinned){ */
+/*   border-left: solid 2px #bac2de !important; */
+/*   border-top-left-radius: 0; */
+/*   border-bottom-left-radius: 0; */
+/* } */
