@@ -13,6 +13,8 @@
 @import url(styles/urlbar/rounded.css);
 /* Shadows */
 @import url(styles/urlbar/shadow.css);
+/* Hide search engines */
+@import url(styles/urlbar/no_search_engines.css);
 
 /* Global variables */
 * {

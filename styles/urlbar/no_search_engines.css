@@ -1,0 +1,3 @@
+#urlbar .search-one-offs:not([hidden]) {
+  display: none !important;
+}
