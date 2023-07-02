@@ -90,3 +90,46 @@
   margin-inline: 0px !important;
   border-left-style: solid !important;
 }
+
+/*SIDEBAR HOVER -- SIDEBAR HEADER*/
+/*Transitions the sidebar switcher text max-width to 0px and opacity to 0 when the sidebar is closed.*/
+#sidebar-box #sidebar-header #sidebar-switcher-target #sidebar-title {
+  transition: opacity calc(var(--uc-autohide-sidebar-speed) * 1.5)
+    var(--uc-autohide-sidebar-delay) !important;
+  opacity: 0;
+}
+/*Transitions the sidebar switcher text max-width to (arbitrary? Try fix this..) 150px and opacity to 1 when the sidebar is open.*/
+#sidebar-box:hover #sidebar-header #sidebar-switcher-target #sidebar-title {
+  transition: opacity calc(var(--uc-autohide-sidebar-speed) * 1.5)
+    var(--uc-autohide-sidebar-delay) !important;
+  opacity: 1;
+}
+
+#sidebar-box #sidebar-header #sidebar-switcher-target {
+  transition: margin-left calc(var(--uc-autohide-sidebar-speed) * 0.3)
+    var(--uc-autohide-sidebar-delay) !important;
+  margin-left: 16px !important;
+}
+
+#sidebar-box:hover #sidebar-header #sidebar-switcher-target {
+  transition: margin-left calc(var(--uc-autohide-sidebar-speed) * 0.3)
+    var(--uc-autohide-sidebar-delay) !important;
+  margin-left: 0px !important;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
+  #sidebar-header {
+  /* transition: all calc(var(--sidebar-duration) * 0.5) !important; */
+  background: linear-gradient(
+      90deg,
+      rgba(17, 17, 27, 0.6),
+      rgba(17, 17, 27, 0.7)
+    ),
+    var(--lwt-additional-images) !important;
+}
+/*Transitions the background of the TreeStyleTab header to the default firefox dark mode background when the sidebar header is hovered*/
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
+  #sidebar-header:hover {
+  /* transition: all calc(var(--sidebar-duration) * 0.5) !important; */
+  background: rgb(17, 17, 27) !important;
+}
