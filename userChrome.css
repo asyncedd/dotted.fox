@@ -118,5 +118,5 @@ See the above repository for updates as well as full license text. */
 #urlbar {
   border: 0 !important;
   border-radius: 20px !important;
-  box-shadow: var(--dark-color) 5px 5px 5px;
+  box-shadow: 0 0 10px var(--dark-color);
 }
