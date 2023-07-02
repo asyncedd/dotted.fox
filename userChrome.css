@@ -105,3 +105,8 @@ See the above repository for updates as well as full license text. */
 #urlbar .urlbar-input {
   text-align: center !important;
 }
+
+#urlbar-background,
+#urlbar-input-container {
+  border-radius: 20px !important;
+}
