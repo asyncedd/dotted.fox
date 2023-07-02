@@ -1,0 +1,4 @@
+#urlbar #urlbar-input, /* ID for Firefox 70 */
+#urlbar .urlbar-input {
+  text-align: center !important;
+}
