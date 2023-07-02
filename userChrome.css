@@ -4,6 +4,10 @@ See the above repository for updates as well as full license text. */
 /* Show sidebar only when the cursor is over it  */
 /* The border controlling sidebar width will be removed so you'll need to modify these values to change width */
 
+:root {
+  --dark-color: rgb(17, 17, 27);
+}
+
 #sidebar-box {
   --uc-sidebar-width: 70px;
   --uc-sidebar-hover-width: 210px;
@@ -109,4 +113,12 @@ See the above repository for updates as well as full license text. */
 #urlbar-background,
 #urlbar-input-container {
   border-radius: 20px !important;
+}
+
+#urlbar {
+  border: 0 !important;
+  border-radius: 20px !important;
+  box-shadow: var(--dark-color) 0px 5px 10px, var(--dark-color) 0px -10px 10px,
+    var(--dark-color) 0px 4px 6px, var(--dark-color) 0px 12px 13px,
+    var(--dark-color) 0px -3px 5px;
 }
