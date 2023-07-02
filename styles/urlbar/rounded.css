@@ -1,4 +1,6 @@
 #urlbar-background,
+#urlbar-input,
+#searchbar,
 #urlbar-input-container {
   border-radius: 20px !important;
 }
