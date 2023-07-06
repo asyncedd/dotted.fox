@@ -2,10 +2,6 @@
 /* Autohide-sidebar */
 @import url(styles/sidebar/autohide.css);
 
-/* Tabs */
-/* Hide tabs */
-@import url(styles/tabs/hide.css);
-
 /* URL Bar */
 /* Center */
 @import url(styles/urlbar/center.css);
@@ -15,6 +11,10 @@
 @import url(styles/urlbar/shadow.css);
 /* Hide search engines */
 @import url(styles/urlbar/no_search_engines.css);
+
+/* Toolbar */
+/* Autohide */
+@import url(styles/toolbar/autohide.css);
 
 /* Global variables */
 * {
