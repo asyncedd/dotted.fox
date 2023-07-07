@@ -1,24 +1,24 @@
 /* Sidebar */
 /* Autohide-sidebar */
-@import url(styles/sidebar/autohide.css);
+@import url(chrome/sidebar/autohide.css);
 
 /* Tabbar */
 /* Hide */
-@import url(styles/tabs/hide.css);
+@import url(chrome/tabs/hide.css);
 
 /* URL Bar */
 /* Center */
-@import url(styles/urlbar/center.css);
+@import url(chrome/urlbar/center.css);
 /* Rounded */
-@import url(styles/urlbar/rounded.css);
+@import url(chrome/urlbar/rounded.css);
 /* Shadows */
-@import url(styles/urlbar/shadow.css);
+@import url(chrome/urlbar/shadow.css);
 /* Hide search engines */
-@import url(styles/urlbar/no_search_engines.css);
+@import url(chrome/urlbar/no_search_engines.css);
 
 /* Toolbar */
 /* Autohide */
-@import url(styles/toolbar/autohide.css);
+@import url(chrome/toolbar/autohide.css);
 
 /* Global variables */
 * {
