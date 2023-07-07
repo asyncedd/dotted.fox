@@ -1,95 +1,74 @@
-/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/autohide_toolbox.css made available under Mozilla Public License v. 2.0
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/autohide_main_toolbar.css made available under Mozilla Public License v. 2.0
 See the above repository for updates as well as full license text. */
 
-/* Hide the whole toolbar area unless urlbar is focused or cursor is over the toolbar */
-/* Dimensions on non-Win10 OS probably needs to be adjusted */
-
-/* Compatibility options for hide_tabs_toolbar.css and tabs_on_bottom.css at the end of this file */
+/* This style hides the main toolbar and shows it when the cursor is over the tabs toolbar as well as whenever the focus is inside nav-bar, such as when urlbar is focused. */
 
 :root {
-  --uc-autohide-toolbox-delay: 200ms; /* Wait 0.1s before hiding toolbars */
-  --uc-toolbox-rotation: 82deg; /* This may need to be lower on mac - like 75 or so */
+  --uc-navbar-transform: -40px;
+}
+:root[uidensity="compact"] {
+  --uc-navbar-transform: -34px;
 }
 
-:root[sizemode="maximized"] {
-  --uc-toolbox-rotation: 88.5deg;
+#navigator-toolbox > div {
+  display: contents;
 }
-
-@media (-moz-platform: windows) {
-  #navigator-toolbox:not(:-moz-lwtheme) {
-    background-color: -moz-dialog !important;
-  }
+:root[sessionrestored]
+  :where(
+    #nav-bar,
+    #PersonalToolbar,
+    #tab-notification-deck,
+    .global-notificationbox
+  ) {
+  transform: translateY(var(--uc-navbar-transform));
 }
-
-:root[sizemode="fullscreen"],
-#navigator-toolbox[inFullscreen] {
-  margin-top: 0 !important;
-}
-
-#navigator-toolbox {
-  position: fixed !important;
-  display: block;
-  background-color: var(--lwt-accent-color, black) !important;
-  transition: transform 160ms linear, opacity 160ms linear !important;
-  transition-delay: var(--uc-autohide-toolbox-delay) !important;
-  transform-origin: top;
-  transform: rotateX(var(--uc-toolbox-rotation));
-  opacity: 0;
-  line-height: 0;
-  z-index: 9999;
-  pointer-events: none;
-}
-
-/* #mainPopupSet:hover ~ box > toolbox, */
-/* Uncomment the above line to make toolbar visible if some popup is hovered */
-#navigator-toolbox:hover,
-#navigator-toolbox:focus-within {
-  transition-delay: 33ms !important;
-  transform: rotateX(0);
-  opacity: 1;
-}
-
-#navigator-toolbox > * {
-  line-height: normal;
-  pointer-events: auto;
-}
-
-#navigator-toolbox,
-#navigator-toolbox > * {
-  width: 100vw;
-  -moz-appearance: none !important;
-  appearance: none !important;
-}
-
-/* These two exist for oneliner compatibility */
-#nav-bar {
-  width: var(--uc-navigationbar-width, 100vw);
-}
-#TabsToolbar {
-  width: calc(100vw - var(--uc-navigationbar-width, 0px));
-}
-
-/* Don't apply transform before window has been fully created */
-:root:not([sessionrestored]) #navigator-toolbox {
-  transform: none !important;
-}
-
-:root[customizing] #navigator-toolbox {
-  position: relative !important;
+:root:is([customizing], [chromehidden*="toolbar"])
+  :where(
+    #nav-bar,
+    #PersonalToolbar,
+    #tab-notification-deck,
+    .global-notificationbox
+  ) {
   transform: none !important;
   opacity: 1 !important;
 }
 
-#navigator-toolbox[inFullscreen] > #PersonalToolbar,
-#PersonalToolbar[collapsed="true"] {
-  display: none;
+#nav-bar:not([customizing]) {
+  opacity: 0.5;
+  transition: transform 400ms ease 1.8s, opacity 400ms ease 1.8s !important;
+  position: relative;
+  z-index: 2;
+}
+#TabsToolbar {
+  position: relative;
+  z-index: 3;
 }
 
-/* Uncomment this if tabs toolbar is hidden with hide_tabs_toolbar.css */
-/*#titlebar{ margin-bottom: -9px }*/
+/* Show when toolbox is focused, like when urlbar has received focus */
+#navigator-toolbox:focus-within > .browser-toolbar {
+  transform: translateY(0);
+  opacity: 1;
+  transition-duration: 500ms, 200ms !important;
+  transition-delay: 0s !important;
+}
+/* Show when toolbox is hovered */
+#titlebar:hover ~ .browser-toolbar,
+#nav-bar:hover,
+#nav-bar:hover + #PersonalToolbar {
+  transform: translateY(0);
+  opacity: 1;
+  transition-duration: 500ms, 200ms !important;
+  transition-delay: 0s !important;
+}
 
-/* Uncomment the following for compatibility with tabs_on_bottom.css - this isn't well tested though */
-/*
-#navigator-toolbox{ flex-direction: column; display: flex; }
-#titlebar{ order: 2 }
-*/
+/* Bookmarks toolbar needs so extra rules */
+#PersonalToolbar {
+  transition: transform 400ms ease 1.8s !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Move up the content view */
+:root[sessionrestored]:not([inFullscreen]) > body > #browser {
+  margin-top: var(--uc-navbar-transform);
+}
