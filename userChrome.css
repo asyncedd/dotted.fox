@@ -2,6 +2,10 @@
 /* Autohide-sidebar */
 @import url(styles/sidebar/autohide.css);
 
+/* Tabbar */
+/* Hide */
+@import url(styles/tabs/hide.css);
+
 /* URL Bar */
 /* Center */
 @import url(styles/urlbar/center.css);
