@@ -20,6 +20,10 @@
 /* Autohide */
 @import url(chrome/toolbar/autohide.css);
 
+/* Popup */
+/* Extensions */
+@import url(chrome/popup/extensions/minimal.css);
+
 /* Global variables */
 * {
   --dotted-dark-color: rgb(17, 17, 27);
