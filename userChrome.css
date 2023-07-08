@@ -26,8 +26,10 @@
 /* Popup */
 /* Extensions */
 @import url(chrome/popup/extensions/minimal.css);
-/* Context menu */
-@import url(chrome/popup/context/edge.css);
+
+/* Integration */
+/* Edge FrFox */
+@import url(chrome/styles/edge-frfox/popup.css);
 
 /* Global variables */
 * {
