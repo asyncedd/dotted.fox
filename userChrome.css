@@ -1,3 +1,6 @@
+/* Icons */
+@import url(icons/icons.css);
+
 /* Sidebar */
 /* Autohide-sidebar */
 @import url(chrome/sidebar/autohide.css);
@@ -23,6 +26,8 @@
 /* Popup */
 /* Extensions */
 @import url(chrome/popup/extensions/minimal.css);
+/* Context menu */
+@import url(chrome/popup/context/edge.css);
 
 /* Global variables */
 * {
