@@ -1,6 +1,10 @@
 /* Icons */
 @import url(icons/icons.css);
 
+/* General */
+/* Compact proton UI */
+@import url(styles/compact_proton.css);
+
 /* Sidebar */
 /* Autohide-sidebar */
 @import url(chrome/sidebar/autohide.css);

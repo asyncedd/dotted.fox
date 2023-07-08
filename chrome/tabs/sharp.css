@@ -24,6 +24,7 @@ See the above repository for updates as well as full license text. */
 .tab-background[selected] {
   border-inline: transparent;
   border-bottom-color: transparent !important;
+  border-radius: 5px !important;
 }
 
 #TabsToolbar {
