@@ -8,7 +8,10 @@
 /* Tabbar */
 /* Hide */
 /* @import url(chrome/tabs/hide.css); */
+/* Floating sharp tabs */
 @import url(chrome/tabs/sharp.css);
+/* Curved tabs */
+@import url(chrome/tabs/curved.css);
 
 /* URL Bar */
 /* Center */
