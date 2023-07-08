@@ -7,7 +7,8 @@
 
 /* Tabbar */
 /* Hide */
-@import url(chrome/tabs/hide.css);
+/* @import url(chrome/tabs/hide.css); */
+@import url(chrome/tabs/sharp.css);
 
 /* URL Bar */
 /* Center */
