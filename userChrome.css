@@ -11,7 +11,9 @@
 /* Floating sharp tabs */
 @import url(chrome/tabs/sharp.css);
 /* Curved tabs */
-@import url(chrome/tabs/curved.css);
+/* @import url(chrome/tabs/curved.css); */
+/* Close animations */
+@import url(chrome/tabs/close-animation.css);
 
 /* URL Bar */
 /* Center */
