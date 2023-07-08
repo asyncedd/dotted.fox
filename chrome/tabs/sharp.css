@@ -54,7 +54,7 @@ See the above repository for updates as well as full license text. */
 }
 /* We draw the icon as background-image to get correct scaling regardless of toolbar height */
 #tabs-newtab-button > .toolbarbutton-icon {
-  border-radius: 0 !important;
+  border-radius: 7px !important;
   width: var(--tab-min-height) !important;
   height: initial !important;
   list-style-image: none;
