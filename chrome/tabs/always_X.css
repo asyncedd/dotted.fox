@@ -1,0 +1,8 @@
+/* Always show the funny `x` close button */
+
+#tabbrowser-tabs[closebuttons="activetab"]
+  .tabbrowser-tab:not([selected="true"]):not([pinned]):hover
+  .close-icon {
+  /* Slow close button even when tabs are low on width */
+  display: block !important;
+}

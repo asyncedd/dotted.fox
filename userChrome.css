@@ -18,6 +18,8 @@
 /* @import url(chrome/tabs/curved.css); */
 /* Close animations */
 @import url(chrome/tabs/close-animation.css);
+/* Always show the close button */
+@import url(chrome/tabs/always_X.css);
 
 /* URL Bar */
 /* Center */
