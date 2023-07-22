@@ -1,5 +1,5 @@
 #sidebar-box {
-  --uc-sidebar-width: 70px;
+  --uc-sidebar-width: 50px;
   --uc-sidebar-hover-width: 210px;
   --uc-autohide-sidebar-delay: 500ms; /* Wait 0.6s before hiding sidebar */
   --uc-autohide-sidebar-speed: 200ms;
@@ -39,6 +39,7 @@
   overflow: hidden;
   color: var(--chrome-color, inherit) !important;
   padding-inline: 0 !important;
+  border-radius: 10px;
 }
 
 #sidebar-header::before,
@@ -46,6 +47,7 @@
   content: "";
   display: flex;
   padding-left: 8px;
+  border-radius: 10px;
 }
 
 #sidebar-header,
@@ -66,6 +68,7 @@
 .sidebar-panel {
   background-color: transparent !important;
   color: var(--newtab-text-primary-color) !important;
+  border-radius: 10px;
 }
 
 .sidebar-panel #search-box {
@@ -100,8 +103,6 @@
 }
 /*Transitions the sidebar switcher text max-width to (arbitrary? Try fix this..) 150px and opacity to 1 when the sidebar is open.*/
 #sidebar-box:hover #sidebar-header #sidebar-switcher-target #sidebar-title {
-  transition: opacity calc(var(--uc-autohide-sidebar-speed) * 1.5)
-    var(--uc-autohide-sidebar-delay) !important;
   opacity: 1;
 }
 
@@ -126,6 +127,7 @@
       rgba(17, 17, 27, 0.7)
     ),
     var(--lwt-additional-images) !important;
+  transition: background 0.3s ease;
 }
 /*Transitions the background of the TreeStyleTab header to the default firefox dark mode background when the sidebar header is hovered*/
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
