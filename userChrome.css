@@ -29,7 +29,7 @@
 /* Shadows */
 @import url(chrome/urlbar/shadow.css);
 /* Hide search engines */
-@import url(chrome/urlbar/no_search_engines.css);
+/* @import url(chrome/urlbar/no_search_engines.css); */
 
 /* Toolbar */
 /* Autohide */
