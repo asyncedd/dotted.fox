@@ -4,8 +4,8 @@ See the above repository for updates as well as full license text. */
 /* This style simply makes the tab stay visible while it is being closed as well as makes the transition a bit slower */
 
 .tabbrowser-tab:not([pinned], [fadein]) {
-  transition-duration: 240ms, 240ms !important;
-  transition-timing-function: ease-out, ease-out !important;
+  transition-duration: 60ms, 60ms !important;
+  transition-timing-function: ease-in-out, ease-in-out !important;
   visibility: visible !important;
 }
 .tab-content:not([fadein], [pinned]) .tab-icon-pending:not([fadein]),
