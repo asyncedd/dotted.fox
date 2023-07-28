@@ -22,6 +22,8 @@
 @import url(chrome/tabs/always_X.css);
 /* Make the tabs take all avalible space*/
 @import url(chrome/tabs/fill-avalible-space.css);
+/* Make the tab content centered */
+@import url(chrome/tabs/center-content.css);
 
 /* URL Bar */
 /* Center */
