@@ -37,11 +37,15 @@
 
 /* Toolbar */
 /* Autohide */
-@import url(chrome/toolbar/autohide.css);
+/* @import url(chrome/toolbar/autohide.css); */
 
 /* Popup */
 /* Extensions */
 @import url(chrome/popup/extensions/minimal.css);
+
+/* Navbar */
+/* Oneliner */
+@import url(chrome/navbar/oneliner.css);
 
 /* Integration */
 /* Edge FrFox */
