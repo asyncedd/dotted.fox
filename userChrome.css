@@ -54,4 +54,5 @@
 /* Global variables */
 * {
   --dotted-dark-color: rgb(17, 17, 27);
+  transition: all 0.2s ease-in-out;
 }
