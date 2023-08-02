@@ -24,6 +24,8 @@
 @import url(chrome/tabs/fill-avalible-space.css);
 /* Make the tab content centered */
 @import url(chrome/tabs/center-content.css);
+/* Remove the overflow borders */
+@import url(chrome/toolbar/remove_overflow_borders.css);
 
 /* URL Bar */
 /* Center */
