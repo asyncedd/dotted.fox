@@ -1,4 +1,4 @@
 #scrollbutton-up + spacer,
 .scrollbox-clip + spacer {
-  border-left-color: red !important;
+  border-left-color: transparent !important;
 }
